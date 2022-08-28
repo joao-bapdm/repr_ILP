@@ -1,0 +1,271 @@
+{
+    "opts": {
+        "method": "KMV",
+        "variant": "KMV",
+        "degree": 1,
+        "dimension": 2,
+        "cmin": 1,
+        "cmax": 3.5,
+        "timestepping": "explicit"
+    },
+    "mesh": {
+        "nz": 60,
+        "nx": 60,
+        "Lz": 2.0,
+        "Lx": 2.0,
+        "Ly": 0.0
+    },
+    "PML": {
+        "status": false,
+        "outer_bc": "non-reflective"
+    },
+    "parallelism": {
+        "type": "custom",
+        "num_cores_per_shot": 1
+    },
+    "water": {
+        "depth_bottom": 1.85
+    },
+    "timeaxis": {
+        "t0": 0.0,
+        "tf": 2.6,
+        "dt": 0.001,
+        "nspool": 500,
+        "fspool": 1
+    },
+    "material": {
+        "type": "SIMP",
+        "vp_min": 1,
+        "vp_max": 3.5,
+        "vp_salt": 3.5,
+        "penal": 1
+    },
+    "cplex": {
+        "gbar": 1,
+        "beta": 0.02,
+        "mul_beta": 25,
+        "rmin": 0.2,
+        "use_rmin": true,
+        "mul_rmin": 20,
+        "lim_rmin": 50,
+        "gamma_m": 0.0,
+        "gamma_v": 0.0,
+        "epsilons": 0.02
+    },
+    "inversion": {
+        "freq_bands": [
+            null
+        ],
+        "optimizer": "tobs",
+        "max_iter": 1000
+    },
+    "salt": {
+        "speed": 4.5
+    },
+    "acquisition": {
+        "source_type": "Ricker",
+        "amplitude": 10.0,
+        "frequency": 2,
+        "delay": 1.0,
+        "source_pos": [
+            [
+                1.95,
+                0.05
+            ],
+            [
+                1.95,
+                1.0
+            ],
+            [
+                1.95,
+                1.95
+            ]
+        ],
+        "receiver_locations": [
+            [
+                0.05,
+                0.05
+            ],
+            [
+                0.05,
+                0.14500000000000002
+            ],
+            [
+                0.05,
+                0.24
+            ],
+            [
+                0.05,
+                0.335
+            ],
+            [
+                0.05,
+                0.43
+            ],
+            [
+                0.05,
+                0.525
+            ],
+            [
+                0.05,
+                0.6200000000000001
+            ],
+            [
+                0.05,
+                0.7150000000000001
+            ],
+            [
+                0.05,
+                0.81
+            ],
+            [
+                0.05,
+                0.905
+            ],
+            [
+                0.05,
+                1.0
+            ],
+            [
+                0.05,
+                1.095
+            ],
+            [
+                0.05,
+                1.1900000000000002
+            ],
+            [
+                0.05,
+                1.2850000000000001
+            ],
+            [
+                0.05,
+                1.3800000000000001
+            ],
+            [
+                0.05,
+                1.475
+            ],
+            [
+                0.05,
+                1.57
+            ],
+            [
+                0.05,
+                1.665
+            ],
+            [
+                0.05,
+                1.76
+            ],
+            [
+                0.05,
+                1.855
+            ],
+            [
+                0.05,
+                1.95
+            ],
+            [
+                1.95,
+                0.05
+            ],
+            [
+                1.95,
+                0.14500000000000002
+            ],
+            [
+                1.95,
+                0.24
+            ],
+            [
+                1.95,
+                0.335
+            ],
+            [
+                1.95,
+                0.43
+            ],
+            [
+                1.95,
+                0.525
+            ],
+            [
+                1.95,
+                0.6200000000000001
+            ],
+            [
+                1.95,
+                0.7150000000000001
+            ],
+            [
+                1.95,
+                0.81
+            ],
+            [
+                1.95,
+                0.905
+            ],
+            [
+                1.95,
+                1.0
+            ],
+            [
+                1.95,
+                1.095
+            ],
+            [
+                1.95,
+                1.1900000000000002
+            ],
+            [
+                1.95,
+                1.2850000000000001
+            ],
+            [
+                1.95,
+                1.3800000000000001
+            ],
+            [
+                1.95,
+                1.475
+            ],
+            [
+                1.95,
+                1.57
+            ],
+            [
+                1.95,
+                1.665
+            ],
+            [
+                1.95,
+                1.76
+            ],
+            [
+                1.95,
+                1.855
+            ],
+            [
+                1.95,
+                1.95
+            ]
+        ],
+        "num_sources": 3,
+        "num_receivers": 42
+    },
+    "data": {
+        "initfile": null,
+        "saltfile": null,
+        "backgroundfile": null,
+        "exactfile": "vp_ls_simple_exact.hdf5",
+        "configfile": "simple_2D_no_adam.json",
+        "pic": "simple_2D_no_adam.png",
+        "resultfile": "simple_2D_no_adam.hdf5",
+        "fobj": "simple_2D_no_adam.npy",
+        "shots": "shots/simple_2D_no_adam"
+    },
+    "output": {
+        "outdir": "results/simple_2D_no_adam/24Sep21_14h43m21s"
+    }
+}

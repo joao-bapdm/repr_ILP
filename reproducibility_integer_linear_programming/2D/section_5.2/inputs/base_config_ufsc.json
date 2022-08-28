@@ -1,0 +1,52 @@
+{
+    "opts": {
+        "method": "KMV",
+        "variant": "KMV",
+        "degree": 1,
+        "dimension": 2,
+        "cmin": 1,
+        "cmax": 3.5,
+        "rmin": 1.0,
+        "timestepping": "explicit"
+    },
+    "mesh": {
+        "nz": 60,
+        "nx": 60,
+        "Lz": 2.0,
+        "Lx": 2.0,
+        "Ly": 0.0,
+        "quad": false,
+        "meshfile": null,
+        "truemodel": null
+    },
+    "timeaxis": {
+        "t0": 0.0,
+        "tf": 2.6,
+        "dt": 0.001,
+        "nspool": 500,
+        "fspool": 1
+    },
+    "PML": {
+        "status": false,
+        "outer_bc": "reflective"
+    },
+    "material": {
+        "type": "TOBS",
+        "vp_min": 1.0,
+        "vp_max": 3.5,
+	"vp_salt": 3.5, 
+        "penal": 1,
+        "salt_penal": 1
+    },
+    "inversion": {
+	"freq_bands": [
+            null
+	],
+	"optimizer":"tobs",
+	"max_iter": 200
+    },
+    "salt": {
+	"speed": 3.5,
+	"exclusive": true
+    }
+}
